@@ -131,7 +131,7 @@ for user in users:
             skills.write(json.dumps(skill))
             
         
-    break
+    
 
             
 # print(skill)
