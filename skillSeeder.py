@@ -10,7 +10,7 @@ skills = open("./skills.json",'a')
 
 # ['occupations'][random.randrange(0,len(json.loads(users[0])['occupations']))]['occupation']['$numberInt']
 # print(user['profile']['occupations'][random.randrange(0,len(user['profile']['occupations']))]['occupation']['$numberInt'])
-
+c = 0
 for user in users:
     user = json.loads(user)
 
@@ -89,9 +89,9 @@ for user in users:
 
                 })
 
-
+            
             skill = {
-                "name":"skill"+str(i),
+                "name":"skill"+str(c),
                 "category": int(category),
                 "subcategory": int(subCategory),
                 "images":images,
@@ -128,6 +128,7 @@ for user in users:
                 "favorite":[]
 
             }
+            c+=1
             skills.write(json.dumps(skill))
             skills.write('\n')
 
