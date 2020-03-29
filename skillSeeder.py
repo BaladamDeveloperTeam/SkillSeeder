@@ -121,6 +121,8 @@ for user in users:
                 "user_id":user['_id']['$oid'],
                 "stamina":5,
                 "seen":[],
+                "buyNumber":0,
+                "avgRate":0.0,
                 "status":bool(random.randint(0,1)),
                 'accept':accept,
                 'like':[],
